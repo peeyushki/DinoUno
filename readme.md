@@ -1,26 +1,69 @@
 # DinoUno
 
 ## Description
-Its a web playable game where the cactus runs instead of our dino we are giving rest to our dino 
+
+DinoUno is a browser-based endless runner game inspired by the offline Google Dinosaur game, but with the roles reversed.
+
+This time, the dinosaur gets some rest while the cactus has to run, jump, and avoid incoming dinosaurs.
+
+The game supports keyboard, touch, and webcam gesture controls. Players can open their palm to jump and close their fist to prepare the next gesture.
 
 ## Screenshot
+
 ![DinoUno gameplay screenshot](s.png)
 
 ## How to Run
-1. Download the repository
-2. Open `index.html`
-3. Press Space to jump
 
-## Current Features
+1. Download or clone the repository.
+2. Open the project folder in VS Code.
+3. Run `index.html` using Live Server.
+4. Allow camera access for gesture controls.
+5. Start playing.
+
+## Controls
+
+- **Open Palm:** Jump using the webcam
+- **Closed Fist:** Prepare the next gesture jump
+- **Spacebar:** Jump
+- **Click or tap:** Jump
+- **R key:** Restart after losing
+
+## Features
+
 - Play as a cactus
-- Jump over dinosaurs
-- Moving obstacles
-
-## Planned Features
-- Hand gesture controls
-- Score system
+- Jump over approaching dinosaurs
+- Webcam hand gesture controls
+- Keyboard and touch controls
+- Random dinosaur speeds
+- Random obstacle spawn timing
+- Smooth movement using delta time
 - Collision detection
+- Score tracking
+- Saved high score
+- Increasing difficulty
+- Game Over and restart system
 
-## Credits
-Fully made by me | The idea i got from offline google dino game when i saw suffering of the dino running 
+## Tech Stack
 
+- HTML
+- CSS
+- JavaScript
+- HTML Canvas API
+- MediaPipe Gesture Recognizer
+- Browser Local Storage
+
+## How Gesture Control Works
+
+DinoUno uses MediaPipe and the device camera to recognize hand gestures.
+
+Opening your palm makes the cactus jump. After jumping, close your fist to prepare the gesture control for another jump. This prevents one open palm from repeatedly triggering jumps.
+
+## Project Structure
+
+```text
+DinoUno/
+├── index.html
+├── style.css
+├── game.js
+├── s.png
+└── readme.md
