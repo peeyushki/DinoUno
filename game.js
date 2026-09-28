@@ -8,7 +8,13 @@ const cactus = {
     x: 100,
     y: groundY - 60,
     width: 35,
-    height: 60
+    height: 60,
+
+    velocityY: 0,
+    gravity: 1,
+    jumpStrength: -18,
+    isJumping: false
+
 }
 
 function drawBackground() {
@@ -42,10 +48,47 @@ function drawCactus() {
 
 }
 
+function jump() {
+    if(cactus.isJumping === false) {
+        cactus.velocityY = cactus.jumpStrength
+        cactus.isJumping = true
+    }
+}
+
+function updateCactus() {
+    cactus.y += cactus.velocityY
+    cactus.velocityY += cactus.gravity
+
+    const floorPosition = groundY - cactus.height
+
+    if( cactus.y >= floorPosition) {
+        cactus.y = floorPosition
+        cactus.velocityY = 0
+        cactus.isJumping = false
+    }
+}
+
+//Spacebar control
+document.addEventListener("keydown", function(event){
+    if (event.code === "Space") {
+        event.preventDefault()
+        jump()
+    }
+})
+
 
 function drawGame() {
     drawBackground()
     drawCactus()
 }
 
-drawGame()
+//Continous update the game
+
+function gameLoop() {
+    updateCactus()
+    drawGame()
+
+    requestAnimationFrame(gameLoop)
+}
+
+gameLoop()
