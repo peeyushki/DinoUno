@@ -4,7 +4,7 @@
 Its a web playable game where the cactus runs instead of our dino we are giving rest to our dino 
 
 ## Screenshot
-https://ibb.co/b5L7KVQ6
+<img src="https://ibb.co/b5L7KVQ6" />
 
 ## How to Run
 1. Download the repository
