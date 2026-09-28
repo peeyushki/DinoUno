@@ -25,3 +25,13 @@ canvas {
     border: 3px solid #263238;
     background: white;
 }
+
+#webcam {
+    width: 180px;
+    border-radius: 10px;
+    transform: scaleX(-1);
+}
+
+#gestureStatus {
+    font-family: Arial;
+}
