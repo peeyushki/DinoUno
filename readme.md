@@ -4,7 +4,7 @@
 Its a web playable game where the cactus runs instead of our dino we are giving rest to our dino 
 
 ## Screenshot
-./s.png
+![DinoUno gameplay screenshot](s.png)
 
 ## How to Run
 1. Download the repository
